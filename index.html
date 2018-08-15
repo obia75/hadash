@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" name="viewport">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="A fully customizable dashboard for Home Assistant" name="description">
+  <link href="assets/images/favicon_1.ico" rel="shortcut icon">
+  <title>Home Assistant Dash</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/li-scroller.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/general.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <!-- Begin page -->
+  <div id="wrapper">
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page"
+         style="margin-left:0px">
+      <!-- Start content -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row m-b-10">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-8">
+                  <ul class="nav nav-pills navtab-bg nav-justified" id="topmenutabs"></ul>
+                </div>
+                <div class="col-sm-4">
+                  <div class="float-right text-right">
+                    <h4 class="m-t-0 text-dark" id="dash_time"></h4>
+                    <p class="text-muted m-0" id="dash_date"></p>
+                  </div>
+                  <div class="float-right displayNone" id="weather_container">
+                    <i class="wi wi-day-cloudy text-primary float-left" style="font-size: 40px;margin-top:10px"></i>
+                    <div class="float-right m-l-15" style="margin-right:35px">
+                      <h4 class="m-t-0 text-dark" id="weather_temp"></h4>
+                      <p class="text-muted m-0" id="weather_sub_info"></p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 tab-content" id="tab-content"></div>
+          </div>
+        </div><!-- end container -->
+      </div><!-- end content -->
+    </div><!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+    <!-- end row -->
+    <div class="row">
+      <ul id="rssfeed"></ul>
+    </div>
+  </div><!-- END wrapper -->
+
+  <div id="ha-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="border-bottom-width: 0px;padding:0px">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+        <div class="modal-body" id="ha-modal-content">
+
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <script src="assets/js/jquery.min.js"></script> 
+  <script src="assets/js/popper.min.js"></script> 
+  <script src="assets/js/bootstrap.min.js"></script> 
+  <script src="assets/js/jquery.li-scroller.1.0.js"></script> 
+  <script src="assets/js/long-press.min.js"></script> 
+  <script src="assets/js/haws_umd.js"></script> 
+  <script src="assets/js/hacom.js"></script> <!-- Plugins  -->
+   
+  <script src="assets/js/jquery.core.js"></script> 
+
+</body>
+</html>

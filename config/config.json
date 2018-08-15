@@ -1,0 +1,108 @@
+{
+  "settings": {
+    "servername": "",
+    "port": "8123",
+    "protocol": "https",
+    "api_password": "",
+    "strings": {
+      "on" : "On",
+      "off": "Off",
+      "brightness": "Brightness",
+      "color_temp": "Color temperature",
+      "status": "Status",
+      "weekdays": {
+        "0": "Sun",
+        "1": "Mon",
+        "2": "Tue",
+        "3": "Wed",
+        "4": "Thu",
+        "5": "Fri",
+        "6": "Sat"
+      },
+      "months": {
+        "0": "January",
+        "1": "February",
+        "2": "March",
+        "3": "April",
+        "4": "May",
+        "5": "June",
+        "6": "July",
+        "7": "August",
+        "8": "September",
+        "9": "October",
+        "10": "November",
+        "11": "December"
+      }
+    }
+  },
+  "layout" : {
+    "global_params": {
+      "bgcolor": "#161d31",
+      "rssurl": "https://www.reddit.com/r/gifs.rss"
+    },
+    "weather": {
+      "temperature": {
+        "entity_id": "sensor.weather_temperature",
+        "unit": "&#8451;"
+      },
+      "sub_info": {
+        "entity_id": "sensor.weather_wind_speed",
+        "unit": "m/s"
+      }
+    }, 
+    "topmenu": [
+      {
+        "id": "tab1",
+        "title": "Downstairs",
+        "content": {
+          "mainview": {
+            "bgimage": "grid.png",
+            "layout": "float",
+            "overlay": [
+              {
+                "entity_id": "switch.livingroom",
+                "type": "rounded-button",
+                "icon": "mdi-toggle-switch",
+                "position": {
+                  "x": "210",
+                  "y": "40"
+                },
+                "size": {
+                  "width": "50",
+                  "height": "50"
+                }
+              },
+              {
+                "entity_id": "light.kitchen",
+                "type": "rounded-button",
+                "icon": "mdi-lightbulb-outline",
+                "position": {
+                  "x": "120",
+                  "y": "260"
+                },
+                "size": {
+                  "width": "50",
+                  "height": "50"
+                }
+              }
+            ]
+          },
+          "rightview": {
+            "panels": [
+              {
+                "entity_id": "group.all_lights_and_switches",
+                "icon": "mdi-lightbulb-outline",
+                "title": "All lights"
+              },
+              {
+                "entity_id": "group.downstairs_lights",
+                "icon": "mdi-lightbulb-outline",
+                "title": "Bottom floor"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
